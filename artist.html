@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+     <link href="/your-path-to-fontawesome/css/fontawesome.css" rel="stylesheet">
+     <link rel="stylesheet" type="text/css" href="artiststyle.css">
+	<title>Artist Pge</title>
+</head>
+<body>
+	<div id="header">
+        <!-- .............................................NAVIGATION BAR................................................. -->
+		<!-- Nav bar contains home button to reach back to home, serach bar, login button & different buttons -->
+        <div id="nav-bar">
+        <!-- Side menu opens the side window -->
+
+        <div id="side-menu"><a href="#side-details"><i class="fas fa-stream"></i></a></div>
+        <div id="logo"><a href="../MusicPlayer/index.html"><img src="assets/music.png"></a></div>
+        <!-- on clicking on the music player icon it will redirect it to the home page -->
+
+        <div id="mpn" class="right-border"><a href="../MusicPlayer/index.html"><span style="color: #f8bf02;">MusicPlayer</span></a></div >
+        <!-- on clicking on the music player name it will redirect it to the home page -->
+
+        <div id="music-player-name"  style="padding-left: 3px;"><a href="../MusicPlayer/index.html"><span style="color: #ffc400; text-decoration: none;">Home</span></a></div>
+        <!-- on clicking on home button it will redirect it to the home page -->
+
+        <div id="music-player-name" class="mpn" style="padding-left: 3px;"><a href=""><span style="color: #ffc400; text-decoration: none;">Browse</span></a></div>
+        <!-- On clicking on this it will let you browse the songs -->
+
+        <div id="music-player-name" class="right-border mpn" style="padding-left: 3px;"><a href=""><span style="color: #ffc400; text-decoration: none;">Upgrade</span></a></div>
+       <!-- Used to upgrade the music player -->
+
+        <div id="search"><form><input type="text" name="search" placeholder="Search"></form></div>
+        <!-- it will let you search songs in the nusic player -->
+
+        <div id="search-button"><a href="#"><i class="fas fa-search" ></i></a></div>
+        <!-- on clicking on search button , song will be searched -->
+
+        <div id="login-button"><a href="#sign-up-box"><span>Login</span> </a></div>
+    </div>
+        <!-- <div id="login-button"><a href="#sign-up-box"><form><input type="submit" name="Login"></form></a></div> -->
+        <!-- On clicking login button, sign up box will open, where user can log in -->
+        
+        <div id="sign-up-box">
+            <!-- sign up box can be closed using close button at the top right  -->
+        	<div id="close-button"><a href="#login-button"><i class="far fa-times-circle"></i></a></div>
+            <!-- use cross button to close the sign up box  -->
+        	<div><h1 class="incenter">Login/Sign-up</h1></div>
+        	<div class="incenter" id="form-box">
+                <!-- contains the form where user can enter their credentials -->
+        	<form>
+        		<label for="username" style="font-weight: bold; font-size: 1.5em; color: teal;">Username</label><br>
+        		<input type="text" name="username" id="username" placeholder="Name" required style="font-weight: bold; font-size: 1em; color: teal;"><br>
+                <!-- box to enter username -->
+        		<label for="password" style="font-weight: bold; font-size: 1.5em; color: teal;">Password</label><br>
+        		<input type="password" name="password" id="password" style="font-weight: bold; font-size: 1em; color: teal;"><br><br>
+                <!-- bos for entering password -->
+        		<input style="background-color: #2857a4; color: white; width: 7em; height: 2.5em; font-size: 1em; border-radius: 2rem;" type="submit" name="submit" value="Submit">
+                <!-- enter submit button to get logged in -->
+        	</form>
+            </div>
+	    </div>
+	</div>
+<!-- .............................................Player body.......................................................... -->
+<section id="player-body">
+    <div id="side-details">
+        <!-- Side details contains the various nav options  -->
+        <div></div>
+        <!-- side details can be closed using the close button -->
+
+        <div><a href="#side-menu"><span style="color: red;">Close</span></a></div>
+        <div><span style="">Library</span></div>
+        <!-- redirect to libray -->
+        <div><a href="#history"><span>History</span></a></div>
+        <!-- redirect to history -->
+        <div><a href=".artist-singles"><span>Songs</span></a></div>
+        <!-- redirect to songs -->
+        <div><a href="#playlist"><span>Albums</span></a></div>
+        <!-- redirect to album -->
+        <div><a href="#"><span>Podcasts</span></a></div>
+        <!-- redirect to podcast -->
+        <div><a href="#"><span>Artists</span></a></div>
+        <!-- redirect to artist -->
+
+    </div>
+    <!-- Music container is the div which conatains all the music, playlist & history -->
+    <div id="music-container">
+    	<div id="music-box">
+            <!-- We heve created artist box in order to store artist details and music sung by him/her -->
+    		<div id="artist-name">
+    			<span>A.R. Rahman</span>
+                <!-- conatins the name of the artist -->
+    		</div>
+    		<div id="artist-det">
+                <!-- Artist det contains the image and basic details of the artist -->
+    			<div id="art-img"><img src="assets/ar2.jpg"></div>
+                <!-- contains the image of artist -->
+    			<div id="art-det">
+                    <!-- Basic details of artist are displayed here -->
+    				<div><p>A.R. Rahman, in full Allah Rakha Rahman, Indian composer whose extensive body of work for film and stage earned him the nickname “the Mozart of Madras.”</p></div>
+    			</div>
+    			<!-- <div id="art-img"><img src="assets/arr.jpg"></div> -->
+    			
+    			
+    		</div>
+    		<div id="artist-music">
+                <!-- artist music contains al the music and all the singles are stored vertically -->
+    			<div class="artist-singles">
+    				<div class="singles-name"><a href="#music-controls">
+                        <!-- On clicking the music it will redirect it to the music player at the bottom of the page -->
+                        <!-- You can add the music to ypur library or like the music by clicling on the heart icon at the right side of the music bar -->
+    					<img src="assets/ar1.jpg">
+    					<span>Jai Ho </span></a>
+    				</div>
+    				<div class="add-icons">
+                        <!-- contains the plus and heart icon to add into library or add to add into the playlist -->
+    					<span><i class="fas fa-heart" id="heart"></i></span>
+    					<!-- <span><i class="far fa-heart" id="heart"></i></span> -->
+    					<span><i class="fas fa-plus" id="plus"></i></span>
+    				</div>
+    			</div>
+    			<div class="artist-singles">
+                    <!-- On clicking the music it will redirect it to the music player at the bottom of the page -->
+                        <!-- You can add the music to ypur library or like the music by clicling on the heart icon at the right side of the music bar -->
+    				<div class="singles-name"><a href="#music-controls">
+    					<img src="assets/arr2.jpg">
+    					<span>Hosanna </span></a>
+    				</div>
+    				<div class="add-icons">
+                        <!-- contains the plus and heart icon to add into library or add to add into the playlist -->
+    					<span><i class="fas fa-heart" id="heart"></i></span>
+    					<!-- <span><i class="far fa-heart" id="heart"></i></span> -->
+    					<span><i class="fas fa-plus" id="plus"></i></span>
+    				</div>
+    			</div>
+    			<div class="artist-singles">
+                    <!-- On clicking the music it will redirect it to the music player at the bottom of the page -->
+                        <!-- You can add the music to ypur library or like the music by clicling on the heart icon at the right side of the music bar -->
+    				<div class="singles-name"><a href="#music-controls">
+    					<img src="assets/ar3.jpg">
+    					<span>Humma Humma </span></a>
+    				</div>
+    				<div class="add-icons">
+                        <!-- contains the plus and heart icon to add into library or add to add into the playlist -->
+    					<span><i class="fas fa-heart" id="heart"></i></span>
+    					<!-- <span><i class="far fa-heart" id="heart"></i></span> -->
+    					<span><i class="fas fa-plus" id="plus"></i></span>
+    				</div>
+    			</div>
+    			<div class="artist-singles">
+                    <!-- On clicking the music it will redirect it to the music player at the bottom of the page -->
+                        <!-- You can add the music to ypur library or like the music by clicling on the heart icon at the right side of the music bar -->
+    				<div class="singles-name"><a href="#music-controls">
+    					<img src="assets/ar4.jpg">
+    					<span>Tu Hai </span></a>
+    				</div>
+    				<div class="add-icons">
+                        <!-- contains the plus and heart icon to add into library or add to add into the playlist -->
+    					<span><i class="fas fa-heart" id="heart"></i></span>
+    					<!-- <span><i class="far fa-heart" id="heart"></i></span> -->
+    					<span><i class="fas fa-plus" id="plus"></i></span>
+    				</div>
+    			</div>
+    			<div class="artist-singles">
+                    <!-- On clicking the music it will redirect it to the music player at the bottom of the page -->
+                        <!-- You can add the music to ypur library or like the music by clicling on the heart icon at the right side of the music bar -->
+    				<div class="singles-name"><a href="#music-controls">
+    					<img src="assets/ar5.jpg">
+    					<span>Tu hi re </span></a>
+    				</div>
+    				<div class="add-icons">
+                        <!-- contains the plus and heart icon to add into library or add to add into the playlist -->
+    					<span><i class="fas fa-heart" id="heart"></i></span>
+    					<!-- <span><i class="far fa-heart" id="heart"></i></span> -->
+    					<span><i class="fas fa-plus" id="plus"></i></span>
+    				</div>
+    			</div>
+    			<div class="artist-singles">
+                    <!-- On clicking the music it will redirect it to the music player at the bottom of the page -->
+                        <!-- You can add the music to ypur library or like the music by clicling on the heart icon at the right side of the music bar -->
+    				<div class="singles-name"><a href="#music-controls">
+    					<img src="assets/ar6.jpg">
+    					<span>Tere Bina </span></a>
+    				</div>
+    				<div class="add-icons">
+                        <!-- contains the plus and heart icon to add into library or add to add into the playlist -->
+    					<span><i class="fas fa-heart" id="heart"></i></span>
+    					<!-- <span><i class="far fa-heart" id="heart"></i></span> -->
+    					<span><i class="fas fa-plus" id="plus"></i></span>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    	<div id="playlist-history-box">
+            <!-- Playlist and history box contains the history of last played songs and the playlist contains the music we have added -->
+           <div id="playlist">
+               <div id="playlist-history-heading"><span>Playlist</span></div>
+               <!-- contains the heading -->
+               <div id="playlist-history-music-box" class="flex-col-display">
+                <!-- All the playlist are songs are placed vertically -->
+            <!-- On hovering over the music song name increases its size and by clicking ont the music , music will be played int bottom music player -->
+                   <a href="#music-controls"><div class="ph-flex">
+                    <!-- Each music box contains the image of the music cover and the name of the song -->
+                       <div id="ph-img"><img src="assets/11.jpg"></div>
+                       <!-- image of the song -->
+                       <div id="ph-name"><span>Tadap Re</span></div>
+                       <!-- name of the song -->
+                       <!-- <i class="fas fa-times" id="ico"></i> -->
+                   </div></a>
+                    <a href="#music-controls"><div class="ph-flex">
+                        <!-- Each music box contains the image of the music cover and the name of the song -->
+                       <div id="ph-img"><img src="assets/15.jpg"></div>
+                       <div id="ph-name"><span>Passengers</span></div>
+                   </div></a>
+                    <a href="#music-controls"><div class="ph-flex">
+                        <!-- Each music box contains the image of the music cover and the name of the song -->
+                       <div id="ph-img"><img src="assets/16.jpg"></div>
+                       <div id="ph-name"><span>This is America</span></div>
+                   </div></a>
+                    <a href="#music-controls"><div class="ph-flex">
+                        <!-- Each music box contains the image of the music cover and the name of the song -->
+                       <div id="ph-img"><img src="assets/12.jpg"></div>
+                       <div id="ph-name"><span>Insane</span></div>
+                   </div></a>
+                    <a href="#music-controls"><div class="ph-flex">
+                        <!-- Each music box contains the image of the music cover and the name of the song -->
+                       <div id="ph-img"><img src="assets/18.jpg"></div>
+                       <div id="ph-name"><span>Mistaken</span></div>
+                   </div></a>
+                    <a href="#music-controls"><div class="ph-flex">
+                        <!-- Each music box contains the image of the music cover and the name of the song -->
+                       <div id="ph-img"><img src="assets/22.jpg"></div>
+                       <div id="ph-name"><span>Mismatched</span></div>
+                   </div></a>
+                    <a href="#music-controls"><div class="ph-flex">
+                        <!-- Each music box contains the image of the music cover and the name of the song -->
+                       <div id="ph-img"><img src="assets/4.jpg"></div>
+                       <div id="ph-name"><span>Starboy</span></div>
+                   </div></a>
+                    <a href="#music-controls"><div class="ph-flex">
+                        <!-- Each music box contains the image of the music cover and the name of the song -->
+                       <div id="ph-img"><img src="assets/28.jpg"></div>
+                       <div id="ph-name"><span>Dil Bechara</span></div>
+                   </div></a>
+                    <a href="#music-controls"><div class="ph-flex">
+                        <!-- Each music box contains the image of the music cover and the name of the song -->
+                       <div id="ph-img"><img src="assets/27.jpg"></div>
+                       <div id="ph-name"><span>Lights</span></div>
+                   </div></a>
+
+               </div>
+           </div>
+           <div id="history">
+            <!-- Playlist and history box contains the history of last played songs and the playlist contains the music we have added -->
+               <div id="playlist-history-heading"><span>History</span></div>
+               <!-- contains the heading  -->
+               <div id="playlist-history-music-box" class="flex-col-display">
+                <!-- All the history are songs are placed vertically -->
+            <!-- On hovering over the music song name increases its size and by clicking ont the music , music will be played int bottom music player -->
+                   <a href="#music-controls"><div class="ph-flex">
+                    <!-- Each music box contains the image of the music cover and the name of the song -->
+                       <div id="ph-img"><img src="assets/1.jpg"></div>
+                       <!-- contains the image of song -->
+                       <div id="ph-name"><span>Filhaal 2</span></div>
+                       <!-- name of the song -->
+                   </div></a>
+                    <a href="#music-controls"><div class="ph-flex">
+                        <!-- Each music box contains the image of the music cover and the name of the song -->
+                       <div id="ph-img"><img src="assets/2.jpg"></div>
+                       <div id="ph-name"><span>Rim Jhim</span></div>
+                   </div></a>
+                    <a href="#music-controls"><div class="ph-flex">
+                        <!-- Each music box contains the image of the music cover and the name of the song -->
+                       <div id="ph-img"><img src="assets/23.jpg"></div>
+                       <div id="ph-name"><span>Imagine</span></div>
+                   </div></a>
+                    <a href="#music-controls"><div class="ph-flex">
+                        <!-- Each music box contains the image of the music cover and the name of the song -->
+                       <div id="ph-img"><img src="assets/katy.jpg"></div>
+                       <div id="ph-name"><span>Teenage Dream</span></div>
+                   </div></a>
+                    <a href="#music-controls"><div class="ph-flex">
+                        <!-- Each music box contains the image of the music cover and the name of the song -->
+                       <div id="ph-img"><img src="assets/21.jpg"></div>
+                       <div id="ph-name"><span>Dusk to Dawn</span></div>
+                   </div></a>
+                   <a href="#music-controls"><div class="ph-flex">
+                    <!-- Each music box contains the image of the music cover and the name of the song -->
+                       <div id="ph-img"><img src="assets/14.jpg"></div>
+                       <div id="ph-name"><span>Jason Deurolo</span></div>
+                   </div></a>
+                   <a href="#music-controls"><div class="ph-flex">
+                    <!-- Each music box contains the image of the music cover and the name of the song -->
+                       <div id="ph-img"><img src="assets/17.jpg"></div>
+                       <div id="ph-name"><span>How Deep Is Your Love</span></div>
+                   </div></a>
+                   <div class="ph-flex"></div>
+                   <div class="ph-flex"></div>
+                   <div class="ph-flex"></div>
+                   <div class="ph-flex"></div>
+               </div>
+           </div>
+       </div>
+    </div>
+    <div id="music-controls">
+        <!-- This div contains the music player which contains the music currently playing and all the control options  -->
+        <div id="current-song">
+            <!-- Contains image and the name of the song currently playing -->
+                <img src="assets/ar3.jpg">
+                <span>Humma Humma</span>
+        </div>
+        <div id="song-controls">
+            <!-- Different buttoms are used to control te music -->
+            <a href=""><i class="fas fa-random"></i></a>
+            <!-- this button picks the songs randomly rather than playing in sequence -->
+            <a href=""><i class="fas fa-backward"></i></a>
+            <!-- to play previous song -->
+            <a href=""><i class="fas fa-pause"></i></a>
+            <!-- to play and pause the music  -->
+            <a href=""><i class="fas fa-forward"></i></a>
+            <!-- to play the next song -->
+            <a href=""><i class="fas fa-redo-alt"></i></a>
+            <!-- this button is used to replay the song currently played -->
+            <!-- <i class="fas fa-repeat"></i> -->
+        </div>
+        <div id="song-time">
+            <span style="color: white;">0:00/4:30</span>
+            <!-- shows the time how much musc is played -->
+            <a href=""><i class="fas fa-ellipsis-h"></i></a>
+            <a href=""><i class="fas fa-volume-up"></i></a>
+            <!-- this button is used to make changes in volume of song , you can increase and decrease the song volume -->
+            <a href="#"><i class="fas fa-times" style="color: red;"></i></a>
+            <!-- for closing the music player , you can click on close button -->
+            
+        </div>
+        
+    </div>
+</section>
+</body>
+</html>

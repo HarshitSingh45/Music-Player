@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+     <link href="/your-path-to-fontawesome/css/fontawesome.css" rel="stylesheet">
+     <link rel="stylesheet" type="text/css" href="indexstyle.css">
+	<title>Harshit Singh Music Player</title>
+</head>
+<body>
+	<div id="header">
+        <!-- .............................................NAVIGATION BAR................................................. -->
+        <!-- Nav bar contains home button to reach back to home, serach bar, login button & different buttons -->
+		<div id="nav-bar">
+        <!-- Side menu opens the side window -->
+        <div id="side-menu"><a href="#side-details"><i class="fas fa-stream"></i></a></div>
+
+        <div id="logo"><img src="assets/music.png"></div>
+        <!-- on clicking on the music player icon it will redirect it to the home page -->
+
+        <div id="mpn" class="right-border"><span>MusicPlayer</span></div >
+         <!-- on clicking on the music player name it will redirect it to the home page -->
+
+        <div id="music-player-name"  style="padding-left: 3px;"><a href=""><span style="color: #ffc400; text-decoration: none;">Home</span></a></div>
+        <!-- on clicking on home button it will redirect it to the home page -->
+
+        <div id="music-player-name" class="mpn" style="padding-left: 3px;"><a href=""><span style="color: #ffc400; text-decoration: none;">Browse</span></a></div>
+        <!-- On clicking on this it will let you browse the songs -->
+
+        <div id="music-player-name" class="right-border mpn" style="padding-left: 3px;"><a href=""><span style="color: #ffc400; text-decoration: none;">Upgrade</span></a></div>
+       <!-- Used to upgrade the music player -->
+
+        <div id="search"><form><input type="text" name="search" placeholder="Search"></form></div>
+        <!-- it will let you search songs int the nusic player -->
+
+        <div id="search-button"><a href="#"><i class="fas fa-search" ></i></a></div>
+        <!-- on clicking on search button , song will be searched -->
+
+        <div id="login-button"><a href="#sign-up-box"><span>Login</span> </a></div>
+    </div>
+        <!-- <div id="login-button"><a href="#sign-up-box"><form><input type="submit" name="Login"></form></a></div> -->
+        <!-- On clicking login button, sign up box will open, where user can log in -->
+        
+        <div id="sign-up-box">
+            <!-- sign up box can be closed using close button at the top right  -->
+        	<div id="close-button"><a href="#login-button"><i class="far fa-times-circle"></i></a></div>
+            <!-- use cross button to close the sign up box  -->
+        	<div><h1 class="incenter">Login/Sign-up</h1></div>
+        	<div class="incenter" id="form-box">
+                 <!-- contains the form where user can enter their credentials -->
+        	<form>
+        		<label for="username" style="font-weight: bold; font-size: 1.5em; color: teal;">Username</label><br>
+        		<input type="text" name="username" id="username" placeholder="Name" required style="font-weight: bold; font-size: 1em; color: teal;"><br>
+                 <!-- box to enter username -->
+        		<label for="password" style="font-weight: bold; font-size: 1.5em; color: teal;">Password</label><br>
+        		<input type="password" name="password" id="password" style="font-weight: bold; font-size: 1em; color: teal;"><br><br>
+                <!-- bos for entering password -->
+        		<input style="background-color: #2857a4; color: white; width: 7em; height: 2.5em; font-size: 1em; border-radius: 2rem;" type="submit" name="submit" value="Submit">
+                <!-- enter submit button to get logged in -->
+        	</form>
+            </div>
+	    </div>
+       
+		<!-- <div id="side-box"> -->
+            <!-- <div style="background-color: darkred; color: white;"><a href="#side-menu"><span style="color: white; text-decoration: none;">close</span></a></div> -->
+             <!-- <div><a href="#container"><span>cbcbiuci</span></a></div> -->
+                <!-- <div></div> -->
+                <!-- <div></div> -->
+                <!-- <div></div> -->
+                <!-- <div></div> -->
+                <!-- <div></div> -->
+                <!-- <div></div> -->
+                <!-- <div></div> -->
+        <!-- </div>	 -->
+	</div>
+<!-- ..................................................................................................................... -->
+
+<section id="player-body">
+    <div id="side-details">
+                <!-- Side details contains the various nav options  -->
+        <div></div>
+                <!-- Side details contains the various nav options  -->
+        <div><a href="#side-menu"><span style="color: red;">Close</span></a></div>
+        <div><span style="">Library</span></div>
+                <!-- redirect to libray -->
+        <div><a href="#history"><span>History</span></a></div>
+                <!-- redirect to libray -->
+        <div><a href="#music-box"><span>Songs</span></a></div>
+                <!-- redirect to libray -->
+        <div><a href="#playlist"><span>Albums</span></a></div>
+                <!-- redirect to album -->
+        <div><a href="#fresh-hits"><span>Fresh Hits</span></a></div>
+                <!-- redirect to podcast -->
+        <div><a href="#artist"><span>Artists</span></a></div>
+                <!-- redirect to artist -->
+
+    </div>
+    <div id="music-container">
+            <!-- Music container is the div which conatains all the music, playlist & history -->
+       <div id="music-box">
+            <!-- conatians all the music  -->
+           <div id="trending">
+               <!-- div to display the trending music -->
+               <div id="trending-heading"><span>&nbsp; Trending Now</span></div>
+               <!-- displays the heading -->
+               <div id="trending-music-box" class="flex-display">
+                   <!-- contains all the trending music  -->
+                   <!-- boxes are displayed using flex -->
+                   <div class="music-box-style">
+                    <!-- box contains the image and name of the music -->
+                    <a href="#music-controls">
+                        <!-- on clicking the image , music will be played in the music bar at the bottom of screen -->
+                        <img src="assets/1.jpg">
+                        <!-- displays image -->
+                        <div class="subtitle"><span>Filhaal 2</span></div>
+                        <!-- displays name of song --> 
+                    </a>
+                   </div>
+                   <div class="music-box-style">
+                    <!-- box contains the image and name of the music -->
+                       <a href="#music-controls">
+                         <!-- on clicking the image , music will be played in the music bar at the bottom of screen -->
+                        <img src="assets/4.jpg">
+                        <!-- displays image -->
+                        <div class="subtitle"><span>Starboy</span></div>
+                        <!-- dislays name of the song -->
+                    </a>
+                   </div>
+                   <div class="music-box-style">
+                    <!-- box contains the image and name of the music -->
+                       <a href="#music-controls">
+                         <!-- on clicking the image , music will be played in the music bar at the bottom of screen -->
+                        <img src="assets/3.jpg">
+                        <!-- displays image -->
+                        <div class="subtitle"><span>Weekend Essentials</span></div>
+                        <!-- dislays name of the song -->
+                    </a>
+                   </div>
+                   <div class="music-box-style">
+                    <!-- box contains the image and name of the music -->
+                       <a href="#music-controls">
+                         <!-- on clicking the image , music will be played in the music bar at the bottom of screen -->
+                        <img src="assets/2.jpg">
+                        <!-- displays image -->
+                        <div class="subtitle"><span></span>Rim Jhim</div>
+                        <!-- dislays name of the song -->
+                    </a>
+                   </div>
+                   <div class="music-box-style">
+                    <!-- box contains the image and name of the music -->
+                       <a href="#music-controls">
+                         <!-- on clicking the image , music will be played in the music bar at the bottom of screen -->
+                        <img src="assets/5.jpg">
+                        <!-- displays image -->
+                        <div class="subtitle"><span>Musicmania</span></div>
+                        <!-- dislays name of the song -->
+                    </a>
+                   </div>
+               </div>
+           </div>
+           <div id="new-releases">
+            <!-- div to display the newly released songs -->
+               <div id="new-releases-heading"><span>&nbsp; New Releases</span></div>
+               <!-- displays the heading -->
+               <div id="new-releases-box" class="flex-display">
+                <!-- conatins all the newly released songs -->
+                   <div class="music-box-style">
+                    <!-- box contains the image and name of the music -->
+                       <img src="assets/11.jpg" class="img-style">
+                       <!-- displays image -->
+                       <div class="subtitle"><span>Tadap</span></div>
+                       <!-- dislays name of the song -->
+                       <div id="play-music">
+                        <!-- on hovering over the song image , play button wil be dislayed -->
+                           <a href="#music-controls">
+                             <!-- on clicking the play button , music will be played in the music bar at the bottom of screen -->
+                               <i class="far fa-play-circle"></i>
+                           </a>
+                           
+                       </div>
+                   </div>
+                   <div class="music-box-style">
+                    <!-- box contains the image and name of the music -->
+                       <img src="assets/12.jpg" class="img-style">
+                       <!-- displays image -->
+                       <div class="subtitle"><span>Insane</span></div>
+                       <!-- dislays name of the song -->
+                       <div id="play-music">
+                        <!-- on hovering over the song image , play button wil be dislayed -->
+                           <a href="#music-controls">
+                             <!-- on clicking the play button , music will be played in the music bar at the bottom of screen -->
+                               <i class="far fa-play-circle"></i>
+                           </a>
+                           
+                       </div>
+                   </div>
+                   <div class="music-box-style">
+                    <!-- box contains the image and name of the music -->
+                       <img src="assets/13.jpg" class="img-style">
+                       <!-- displays image -->
+                       <div class="subtitle"><span>Hustlin</span></div>
+                       <!-- dislays name of the song -->
+                       <div id="play-music">
+                        <!-- on hovering over the song image , play button wil be dislayed -->
+                           <a href="#music-controls">
+                             <!-- on clicking the play button , music will be played in the music bar at the bottom of screen -->
+                               <i class="far fa-play-circle"></i>
+                           </a>
+                           
+                       </div>
+                   </div>
+                   <div class="music-box-style">
+                    <!-- box contains the image and name of the music -->
+                       <img src="assets/14.jpg" class="img-style">
+                       <!-- displays image -->
+                       <div class="subtitle"><span>Try Me</span></div>
+                       <!-- dislays name of the song -->
+                       <div id="play-music">
+                        <!-- on hovering over the song image , play button wil be dislayed -->
+                           <a href="#music-controls">
+                             <!-- on clicking the play button , music will be played in the music bar at the bottom of screen -->
+                               <i class="far fa-play-circle"></i>
+                           </a>
+                           
+                       </div>
+                   </div>
+                   <div class="music-box-style">
+                    <!-- box contains the image and name of the music -->
+                       <img src="assets/15.jpg" class="img-style">
+                       <!-- displays image -->
+                       <div class="subtitle"><span>Passenger</span></div>
+                       <!-- dislays name of the song -->
+                       <div id="play-music">
+                        <!-- on hovering over the song image , play button wil be dislayed -->
+                           <a href="#music-controls">
+                             <!-- on clicking the play button , music will be played in the music bar at the bottom of screen -->
+                               <i class="far fa-play-circle"></i>
+                           </a>
+                           
+                       </div>
+                   </div>
+                   <div class="music-box-style">
+                    <!-- box contains the image and name of the music -->
+                       <img src="assets/16.jpg" class="img-style">
+                       <!-- displays image -->
+                       <div class="subtitle"><span>This Is America</span></div>
+                       <!-- dislays name of the song -->
+                       <div id="play-music">
+                        <!-- on hovering over the song image , play button wil be dislayed -->
+                           <a href="#music-controls">
+                             <!-- on clicking the play button , music will be played in the music bar at the bottom of screen -->
+                               <i class="far fa-play-circle"></i>
+                           </a>
+                           
+                       </div>
+                   </div>
+                   <div class="music-box-style">
+                    <!-- box contains the image and name of the music -->
+                       <img src="assets/17.jpg" class="img-style">
+                       <!-- displays image -->
+                       <div class="subtitle"><span>Deep Love</span></div>
+                       <!-- dislays name of the song -->
+                       <div id="play-music">
+                        <!-- on hovering over the song image , play button wil be dislayed -->
+                           <a href="#music-controls">
+                             <!-- on clicking the play button , music will be played in the music bar at the bottom of screen -->
+                               <i class="far fa-play-circle"></i>
+                           </a>
+                           
+                       </div>
+                   </div>
+                   <div class="music-box-style">
+                    <!-- box contains the image and name of the music -->
+                       <img src="assets/18.jpg" class="img-style">
+                       <!-- displays image -->
+                       <div class="subtitle"><span>Mistaken</span></div>
+                       <!-- dislays name of the song -->
+                       <div id="play-music">
+                        <!-- on hovering over the song image , play button wil be dislayed -->
+                           <a href="#music-controls">
+                             <!-- on clicking the play button , music will be played in the music bar at the bottom of screen -->
+                               <i class="far fa-play-circle"></i>
+                           </a>
+                           
+                       </div>
+                   </div>
+               </div>
+           </div>
+           <div id="artist">
+            <!-- this div displays all the artists -->
+               <div id="artist-heading"><span>&nbsp; Artists</span></div>
+               <!-- displays the heading  -->
+               <div id="artist-box" class="flex-display">
+                   <div class="mbs">
+                    <!-- contains single artist info -->
+                       <a href="artist.html">
+                        <!-- on clicking over the image, it will redirect to srtist page, where artist data and songs are displayed -->
+                        <img src="assets/ar.jpg" style="border-radius: 50%;">
+                        <!-- displays image of artist -->
+                        <div class="subtitle"><span>A.R Rahman</span></div>
+                        <!-- displays name of artist -->
+                    </a>
+
+                   </div>
+                   <div class="mbs">
+                    <!-- contains single artist info -->
+                       <a href="artist.html">
+                        <!-- on clicking over the image, it will redirect to srtist page, where artist data and songs are displayed -->
+                        <img src="assets/adam.jpg" style="border-radius: 50%;">
+                        <!-- displays image of artist -->
+                        <div class="subtitle"><span>Adam Levine</span></div>
+                        <!-- displays name of artist -->
+                    </a>
+                   </div>
+                   <div class="mbs">
+                    <!-- contains single artist info -->
+                       <a href="artist.html">
+                        <!-- on clicking over the image, it will redirect to srtist page, where artist data and songs are displayed -->
+                        <img src="assets/katy.jpg" style="border-radius: 50%;">
+                        <!-- displays image of artist -->
+                        <div class="subtitle"><span>Katy Perry</span></div>
+                        <!-- displays name of artist -->
+                    </a>
+                   </div>
+                   <div class="mbs">
+                    <!-- contains single artist info -->
+                       <a href="artist.html">
+                        <!-- on clicking over the image, it will redirect to srtist page, where artist data and songs are displayed -->
+                        <img src="assets/zayn.jpg" style="border-radius: 50%;">
+                        <!-- displays image of artist -->
+                        <div class="subtitle"><span>Zayn Malik</span></div>
+                        <!-- displays name of artist -->
+                    </a>
+                   </div>
+                   <div class="mbs">
+                    <!-- contains single artist info -->
+                       <a href="artist.html">
+                        <!-- on clicking over the image, it will redirect to srtist page, where artist data and songs are displayed -->
+                        <img src="assets/pitbull.jpg" style="border-radius: 50%;">
+                        <!-- displays image of artist -->
+                        <div class="subtitle"><span>Pitbull</span></div>
+                        <!-- displays name of artist -->
+                    </a>
+                   </div>
+               </div>
+           </div>
+           <div id="fresh-hits">
+            <!-- this div contains the fresh hits songs -->
+               <div id="hits-heading"><span>&nbsp; Fresh-Hits</span></div>
+               <!-- displays the heading -->
+               <div id="hits-box" class="flex-display">
+                <!-- contains all the music -->
+                   <div class="music-box-style">
+                    <!-- displays the single music -->
+                       <img src="assets/21.jpg" class="img-style">
+                       <!-- displays image of the song -->
+                       <div class="subtitle"><span>Zayn Essentials</span></div>
+                       <!-- displays name of the song -->
+                       <div id="play-music">
+                        <!-- on hovering over the song image , play button wil be dislayed -->
+                           <a href="#music-controls">
+                            <!-- on clicking the play button , music will be played in the music bar at the bottom of screen -->
+                               <i class="far fa-play-circle"></i>
+                           </a>
+                           
+                       </div>
+                   </div>
+                   <div class="music-box-style">
+                    <!-- displays the single music -->
+                       <img src="assets/22.jpg" class="img-style">
+                       <!-- displays the image of song -->
+                       <div class="subtitle"><span>Mismatched</span></div>
+                       <!-- displays the name of the song -->
+                       <div id="play-music">
+                         <!-- on hovering over the song image , play button wil be dislayed -->
+                           <a href="#music-controls">
+                            <!-- on clicking the play button , music will be played in the music bar at the bottom of screen -->
+                               <i class="far fa-play-circle"></i>
+                           </a>
+                           
+                       </div>
+                   </div>
+                   <div class="music-box-style">
+                    <!-- displays the single music -->
+                       <img src="assets/23.jpg" class="img-style">
+                       <!-- displays the image of song -->
+                       <div class="subtitle"><span>Young Guns</span></div>
+                       <!-- displays the name of the song -->
+                       <div id="play-music">
+                         <!-- on hovering over the song image , play button wil be dislayed -->
+                           <a href="#music-controls">
+                            <!-- on clicking the play button , music will be played in the music bar at the bottom of screen -->
+                               <i class="far fa-play-circle"></i>
+                           </a>
+                           
+                       </div>
+                   </div>
+                   <div class="music-box-style">
+                    <!-- displays the single music -->
+                       <img src="assets/24.png" class="img-style">
+                       <!-- displays the image of song -->
+                       <div class="subtitle"><span>Anyone</span></div>
+                       <!-- displays the name of the song -->
+                       <div id="play-music">
+                         <!-- on hovering over the song image , play button wil be dislayed -->
+                           <a href="#music-controls">
+                            <!-- on clicking the play button , music will be played in the music bar at the bottom of screen -->
+                               <i class="far fa-play-circle"></i>
+                           </a>
+                           
+                       </div>
+                   </div>
+                   <div class="music-box-style">
+                    <!-- displays the single music -->
+                       <img src="assets/25.jfif" class="img-style">
+                       <!-- displays the image of song -->
+                       <div class="subtitle"><span>Maroon 5</span></div>
+                       <!-- displays the name of the song -->
+                       <div id="play-music">
+                         <!-- on hovering over the song image , play button wil be dislayed -->
+                           <a href="#music-controls">
+                            <!-- on clicking the play button , music will be played in the music bar at the bottom of screen -->
+                               <i class="far fa-play-circle"></i>
+                           </a>
+                           
+                       </div>
+                   </div>
+                   <div class="music-box-style">
+                    <!-- displays the single music -->
+                       <img src="assets/26.jpg" class="img-style">
+                       <!-- displays the image of song -->
+                       <div class="subtitle"><span>Oh Saaiyaan</span></div>
+                       <!-- displays the name of the song -->
+                       <div id="play-music">
+                         <!-- on hovering over the song image , play button wil be dislayed -->
+                           <a href="#music-controls">
+                            <!-- on clicking the play button , music will be played in the music bar at the bottom of screen -->
+                               <i class="far fa-play-circle"></i>
+                           </a>
+                           
+                       </div>
+                   </div>
+                   <div class="music-box-style">
+                    <!-- displays the single music -->
+                       <img src="assets/27.jpg" class="img-style">
+                       <!-- displays the image of song -->
+                       <div class="subtitle"><span>Brown Munde</span></div>
+                       <!-- displays the name of the song -->
+                       <div id="play-music">
+                         <!-- on hovering over the song image , play button wil be dislayed -->
+                           <a href="#music-controls">
+                            <!-- on clicking the play button , music will be played in the music bar at the bottom of screen -->
+                               <i class="far fa-play-circle"></i>
+                           </a>
+                           
+                       </div>
+                   </div>
+                   <div class="music-box-style">
+                    <!-- displays the single music -->
+                       <img src="assets/28.jpg" class="img-style">
+                       <!-- displays the image of song -->
+                       <div class="subtitle"><span>Dil Bechara</span></div>
+                       <!-- displays the name of the song -->
+                       <div id="play-music">
+                         <!-- on hovering over the song image , play button wil be dislayed -->
+                           <a href="#music-controls">
+                            <!-- on clicking the play button , music will be played in the music bar at the bottom of screen -->
+                               <i class="far fa-play-circle"></i>
+                           </a>
+                           
+                       </div>
+                   </div>
+                   <div class="music-box-style">
+                    <!-- displays the single music -->
+                       <img src="assets/29.jpg" class="img-style">
+                       <!-- displays the image of song -->
+                       <div class="subtitle"><span>Roar</span></div>
+                       <!-- displays the name of the song -->
+                       <div id="play-music">
+                         <!-- on hovering over the song image , play button wil be dislayed -->
+                           <a href="#music-controls">
+                            <!-- on clicking the play button , music will be played in the music bar at the bottom of screen -->
+                               <i class="far fa-play-circle"></i>
+                           </a>
+                           
+                       </div>
+                   </div>
+                   <div class="music-box-style">
+                    <!-- displays the single music -->
+                       <img src="assets/30.jpg" class="img-style">
+                       <!-- displays the image of song -->
+                       <div class="subtitle"><span>Rabba Mehar Kari</span></div>
+                       <!-- displays the name of the song -->
+                       <div id="play-music">
+                         <!-- on hovering over the song image , play button wil be dislayed -->
+                           <a href="#music-controls">
+                            <!-- on clicking the play button , music will be played in the music bar at the bottom of screen -->
+                               <i class="far fa-play-circle"></i>
+                           </a>
+                           
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+       <div id="playlist-history-box">
+        <!-- Playlist and history box contains the history of last played songs and the playlist contains the music we have added -->
+           <div id="playlist">
+               <div id="playlist-history-heading"><span>Playlist</span></div>
+               <!-- contains the heading -->
+               <div id="playlist-history-music-box" class="flex-col-display">
+                <!-- All the playlist are songs are placed vertically -->
+            <!-- On hovering over the music song name increases its size and by clicking ont the music , music will be played int bottom music player -->
+                   <a href="#music-controls"><div class="ph-flex">
+                    <!-- Each music box contains the image of the music cover and the name of the song -->
+                       <div id="ph-img"><img src="assets/11.jpg"></div>
+                       <div id="ph-name"><span>Tadap Re</span></div>
+                       <!-- <i class="fas fa-times" id="ico"></i> -->
+                   </div></a>
+                    <a href="#music-controls"><div class="ph-flex">
+                        <!-- Each music box contains the image of the music cover and the name of the song -->
+                       <div id="ph-img"><img src="assets/15.jpg"></div>
+                       <div id="ph-name"><span>Passengers</span></div>
+                   </div></a>
+                    <a href="#music-controls"><div class="ph-flex">
+                        <!-- Each music box contains the image of the music cover and the name of the song -->
+                       <div id="ph-img"><img src="assets/16.jpg"></div>
+                       <div id="ph-name"><span>This is America</span></div>
+                   </div></a>
+                    <a href="#music-controls"><div class="ph-flex">
+                        <!-- Each music box contains the image of the music cover and the name of the song -->
+                       <div id="ph-img"><img src="assets/12.jpg"></div>
+                       <div id="ph-name"><span>Insane</span></div>
+                   </div></a>
+                    <a href="#music-controls"><div class="ph-flex">
+                        <!-- Each music box contains the image of the music cover and the name of the song -->
+                       <div id="ph-img"><img src="assets/18.jpg"></div>
+                       <div id="ph-name"><span>Mistaken</span></div>
+                   </div></a>
+                    <a href="#music-controls"><div class="ph-flex">
+                        <!-- Each music box contains the image of the music cover and the name of the song -->
+                       <div id="ph-img"><img src="assets/22.jpg"></div>
+                       <div id="ph-name"><span>Mismatched</span></div>
+                   </div></a>
+                    <a href="#music-controls"><div class="ph-flex">
+                        <!-- Each music box contains the image of the music cover and the name of the song -->
+                       <div id="ph-img"><img src="assets/4.jpg"></div>
+                       <div id="ph-name"><span>Starboy</span></div>
+                   </div></a>
+                    <a href="#music-controls"><div class="ph-flex">
+                        <!-- Each music box contains the image of the music cover and the name of the song -->
+                       <div id="ph-img"><img src="assets/28.jpg"></div>
+                       <div id="ph-name"><span>Dil Bechara</span></div>
+                   </div></a>
+                    <a href="#music-controls"><div class="ph-flex">
+                        <!-- Each music box contains the image of the music cover and the name of the song -->
+                       <div id="ph-img"><img src="assets/27.jpg"></div>
+                       <div id="ph-name"><span>Lights</span></div>
+                   </div></a>
+
+               </div>
+           </div>
+           <div id="history">
+            <!-- Playlist and history box contains the history of last played songs and the playlist contains the music we have added -->
+               <div id="playlist-history-heading"><span>History</span></div>
+                <!-- contains the heading  -->
+               <div id="playlist-history-music-box" class="flex-col-display">
+                <!-- All the history are songs are placed vertically -->
+            <!-- On hovering over the music song name increases its size and by clicking ont the music , music will be played int bottom music player -->
+                   <a href="#music-controls"><div class="ph-flex">
+                    <!-- Each music box contains the image of the music cover and the name of the song -->
+                       <div id="ph-img"><img src="assets/1.jpg"></div>
+                       <div id="ph-name"><span>Filhaal 2</span></div>
+                   </div></a>
+                    <a href="#music-controls"><div class="ph-flex">
+                        <!-- Each music box contains the image of the music cover and the name of the song -->
+                       <div id="ph-img"><img src="assets/2.jpg"></div>
+                       <div id="ph-name"><span>Rim Jhim</span></div>
+                   </div></a>
+                    <a href="#music-controls"><div class="ph-flex">
+                        <!-- Each music box contains the image of the music cover and the name of the song -->
+                       <div id="ph-img"><img src="assets/23.jpg"></div>
+                       <div id="ph-name"><span>Imagine</span></div>
+                   </div></a>
+                    <a href="#music-controls"><div class="ph-flex">
+                    <!-- Each music box contains the image of the music cover and the name of the song -->
+                       <div id="ph-img"><img src="assets/katy.jpg"></div>
+                       <div id="ph-name"><span>Teenage Dream</span></div>
+                   </div></a>
+                    <a href="#music-controls"><div class="ph-flex">
+                        <!-- Each music box contains the image of the music cover and the name of the song -->
+                       <div id="ph-img"><img src="assets/21.jpg"></div>
+                       <div id="ph-name"><span>Dusk to Dawn</span></div>
+                   </div></a>
+                   <a href="#music-controls"><div class="ph-flex">
+                    <!-- Each music box contains the image of the music cover and the name of the song -->
+                       <div id="ph-img"><img src="assets/14.jpg"></div>
+                       <div id="ph-name"><span>Jason Deurolo</span></div>
+                   </div></a>
+                   <a href="#music-controls"><div class="ph-flex">
+                    <!-- Each music box contains the image of the music cover and the name of the song -->
+                       <div id="ph-img"><img src="assets/17.jpg"></div>
+                       <div id="ph-name"><span>How Deep Is Your Love</span></div>
+                   </div></a>
+                   <div class="ph-flex"></div>
+                   <div class="ph-flex"></div>
+                   <div class="ph-flex"></div>
+                   <div class="ph-flex"></div>
+               </div>
+           </div>
+       </div>
+    </div>
+    <div id="music-controls">
+        <!-- This div contains the music player which contains the music currently playing and all the control options  -->
+        <div id="current-song">
+            <!-- Contains image and the name of the song currently playing -->
+                <img src="assets/4.jpg">
+                <span>Starboy</span>
+        </div>
+        <div id="song-controls">
+            <!-- Different buttoms are used to control te music -->
+            <a href=""><i class="fas fa-random"></i></a>
+            <!-- this button picks the songs randomly rather than playing in sequence -->
+            <a href=""><i class="fas fa-backward"></i></a>
+            <!-- to play previous song -->
+            <a href=""><i class="fas fa-pause"></i></a>
+            <!-- to play and pause the music  -->
+            <a href=""><i class="fas fa-forward"></i></a>
+            <!-- to play the next song -->
+            <a href=""><i class="fas fa-redo-alt"></i></a>
+            <!-- this button is used to replay the song currently played -->
+            <!-- <i class="fas fa-repeat"></i> -->
+        </div>
+        <div id="song-time">
+            <span>0:00/5:30</span>
+            <!-- shows the time how much musc is played -->
+            <a href=""><i class="fas fa-ellipsis-h"></i></a>
+            <a href=""><i class="fas fa-volume-up"></i></a>
+            <!-- this button is used to make changes in volume of song , you can increase and decrease the song volume -->
+            <a href="#"><i class="fas fa-times" style="color: red;"></i></a>
+            <!-- for closing the music player , you can click on close button -->
+            
+        </div>
+        
+    </div>
+</section>
+	
+
+</body>
+</html>
